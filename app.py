@@ -16,7 +16,7 @@ def load_rag_system():
     pc = Pinecone(api_key=PINECONE_API_KEY)
     index = pc.Index("generative-ai-qbank")
     embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
-    llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key=OPENAI_API_KEY)
+    llm = ChatOpenAI(model_name="gpt-5.6-luna", temperature=0, openai_api_key=OPENAI_API_KEY)
     return index, embeddings, llm
 
 index, embeddings, llm = load_rag_system()
